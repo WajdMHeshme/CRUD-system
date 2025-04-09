@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD SYS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>cruds</h2>
+            <p>product management system</p>
+        </div>
+        <div class="inputs" style="margin-top: 35px;">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <div class="price">
+                <input onkeyup="getData()" type="number" name="" id="price" placeholder="Price">
+                <input onkeyup="getData()" type="number" name="" id="taxes" placeholder="Taxes">
+                <input onkeyup="getData()" type="number" name="" id="ads" placeholder="Ads">
+                <input onkeyup="getData()" type="number" name="" id="discount" placeholder="Discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" name="" id="count" placeholder="Count">
+            <input type="text" name="" id="category" placeholder="Category">
+            <button id="submit">Create</button>
+        </div>
+        <div class="outputs">
+            <div class="serach-block">
+                <input onkeyup="searchData(this.value)" type="text" name="" id="search" placeholder="search">
+                <div class="btn-search">
+                    <button onclick="getMood(this.id)" id="serachByTitle">Search By Title</button>
+                    <button onclick="getMood(this.id)" id="serachByCatigory">Search By Category</button>
+                </div>
+            </div>
+        </div>
+        <div id="deleteAll">
+            
+        </div>
+        <table>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+            <tbody id="tbody">
+                 <tr>
+                    <td>30002</td>
+                    <td>phone</td>
+                    <td>200</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>210</td>
+                    <td>s22</td>
+                    <td><button class="update">update</button></td>
+                    <td><button class="delete">delete</button></td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="crud.js"></script>
+</html>
